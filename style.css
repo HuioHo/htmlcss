@@ -62,8 +62,15 @@ table {
     margin-bottom: 24px;
 }
 
+.menu ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .menu-bar{
     gap: 40px;
+    display: flex;
 }
 
 .front{
@@ -75,12 +82,16 @@ table {
     width: 50%;
 }
 
+.front-title{
+    width: 50%;
+}
+
 .desktop{
-    display: none;
+    display: block;
 }
 
 .mobile{
-    display: block;
+    display: none;
 }
 
 .menu-btn{
@@ -126,7 +137,7 @@ h1{
 }
 
 h2{
-    font-size: 28;
+    font-size: 28px;
     color: #0027D5;
     font-weight: 700;
 }
@@ -188,4 +199,19 @@ h3{
     border-radius: 40px;
     background-color: #FBFBFB;
     color: #4B4B4B;
+}
+
+@media (max-width: 375px){
+    .desktop{    
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .front{
+        flex-direction: column;
+    }
+    .front-img, .front-title{
+        width: 100%;
+    }
 }
