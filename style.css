@@ -87,8 +87,14 @@ a{
     width: 50%;
 }
 
+.front-img img{
+    width: 100%;
+    height: auto;
+}
+
 .front-title{
     width: 50%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,6 +179,10 @@ h3{
     background-color: #EDEDED;
     padding: 24px;
     border-radius: 24px;
+}
+
+.p4 .summary{
+    margin: 24px 0;
 }
 
 .p4{
