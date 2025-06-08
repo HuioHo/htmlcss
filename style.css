@@ -63,6 +63,7 @@ table {
 }
 
 .menu ul{
+    height: 100%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -71,6 +72,10 @@ table {
 .menu-bar{
     gap: 40px;
     display: flex;
+}
+
+a{
+    text-decoration: none;
 }
 
 .front{
@@ -84,6 +89,9 @@ table {
 
 .front-title{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .desktop{
@@ -152,7 +160,7 @@ h2{
 
 h3{
     font-size: 20px;
-    font-weight: var(--font-weight-bold);
+    font-weight: 700;
     margin-bottom: 12px;
 }
 
@@ -201,17 +209,80 @@ h3{
     color: #4B4B4B;
 }
 
-@media (max-width: 375px){
+ol{
+    list-style-type: decimal;
+    margin-left: 1.5em;
+}
+
+.content ul{
+    list-style-type: disc;
+    margin-left: 1.5em;
+}
+
+.content ul li::marker{
+    font-size: 0.5rem;
+}
+
+.summary{
+    margin: 24px  0;
+}
+
+.footer{
+    margin: 80px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mail a{
+    font-size: 32px;
+    color:#000000;
+}
+
+.media{
+    display: flex;
+    gap: 24px;
+}
+
+.media i{
+    color:#0027D5;
+    font-size: 24px;
+}
+
+.bottom{
+    margin: 24px 0;
+    text-align: center;
+}
+
+@media (max-width: 374px){
     .desktop{    
         display: none;
     }
+
     .mobile{
         display: block;
     }
+
     .front{
         flex-direction: column;
     }
+
     .front-img, .front-title{
         width: 100%;
+        padding: 48px 12px 0px;
+    }
+
+    .front-img{
+        width: 100%;
+        background-color: pink;
+    }
+
+    content{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    footer .footer{
+        display: none;
     }
 }
