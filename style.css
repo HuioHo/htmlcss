@@ -52,8 +52,13 @@ table {
 	border-spacing: 0;
 }
 
-*::before,
-*::after{
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+*, *::before, *::after{
     box-sizing: border-box;
 }
 
@@ -144,6 +149,8 @@ h1{
     margin: 0 auto;
     padding-top: 80px;
     padding-bottom: 80px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .margin24{
@@ -201,6 +208,8 @@ h3{
     display: flex;
     justify-content: space-between;
     margin-top: 48px;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .up{
@@ -242,6 +251,7 @@ ol{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    display: none;
 }
 
 .mail a{
@@ -275,11 +285,16 @@ ol{
 
     .front{
         flex-direction: column;
+        padding: 0 12px;
     }
 
     .front-img, .front-title{
         width: 100%;
-        padding: 48px 12px 0px;
+        padding: 0;
+    }
+
+    .front-title{
+        padding-top: 48px;
     }
 
     .front-img{
